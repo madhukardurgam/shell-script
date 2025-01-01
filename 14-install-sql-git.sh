@@ -18,6 +18,9 @@ then
     if [ $? -ne 0 ];
     then
         echo "package install is failure"
+        exit 1
     else
         echo "package install is success"
+else 
+    echo "package is already installed"
 fi
