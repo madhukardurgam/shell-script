@@ -21,6 +21,7 @@ then
         exit 1
     else
         echo "package install is success"
+    fi
 else 
     echo "package is already installed"
 fi
