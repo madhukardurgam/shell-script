@@ -10,22 +10,14 @@ if [ $USERID -ne 0 ];
 then
     echo "Need the root access to run the script command"
     exit 1
-else
-    echo "You have the access to run the script"
 fi
 dnf list installed mysql
 if [ $? -ne 0 ];
 then
-    echo "Package is not installed"
-    exit 1
-else
-    echo "Package is already installed"
-fi
-dnf install mysql -y
-if [ $? -ne 0 ];
-then
-    echo "Package install is FAILURE"
-    exit 1
-else
-    echo "Package install is SUCCESS"
+    dnf install mysql -y
+    if [ $? -ne 0 ];
+    then
+        echo "package install is failure"
+    else
+        echo "package install is success"
 fi
