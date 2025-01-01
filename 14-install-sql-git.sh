@@ -17,13 +17,15 @@ dnf list installed mysql
 if [ $? -ne 0 ];
 then
     echo "Package is not installed"
+    exit 1
 else
     echo "Package is already installed"
 fi
 dnf install mysql -y
 if [ $? -ne 0 ];
 then
-    echo "Package is not installed"
+    echo "Package install is FAILURE"
+    exit 1
 else
-    echo "Package is already installed"
+    echo "Package install is SUCCESS"
 fi
