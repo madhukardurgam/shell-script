@@ -6,7 +6,6 @@
 #if the user is haves root access then install the mysql
 # for the git also same procedure
 USERID=$(id -u)
-dnf list installed mysql
 if [ $? -ne 0 ];
 then
     echo "Need the root access to run the script command"
