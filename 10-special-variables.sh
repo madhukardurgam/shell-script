@@ -1,6 +1,6 @@
 #!/bin/bash
 
-$1 $2 $3
+#no need to give the input here but we have to give dynamically on cli the will get the output
 echo "All variables passed: $@"
 echo "Number of variables passed: $#"
 echo "script name :$0"
