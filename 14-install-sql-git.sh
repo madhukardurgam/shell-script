@@ -25,3 +25,18 @@ then
 else 
     echo "package is already installed"
 fi
+
+dnf list installed git
+if [ $? -ne 0 ];
+then
+    dnf install git -y
+    if [ $? -ne 0 ];
+    then
+        echo "package install is failure"
+        exit 1
+    else
+        echo "package install is success"
+    fi
+else 
+    echo "package is already installed"
+fi
