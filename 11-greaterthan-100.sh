@@ -5,8 +5,8 @@
 
 NUMBER=$1
 if [$NUMBER -gt 100] 
-then
-    echo "Given number is greater than 100: $NUMBER"
+    then
+        echo "Given number is greater than 100: $NUMBER"
 else
     echo "Given number is lesser than 100: $NUMBER"
 fi
