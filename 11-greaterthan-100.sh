@@ -8,5 +8,5 @@ if [ $NUMBER -gt 100 ];
     then
         echo "Given number is greater than 100: $NUMBER"
 else
-    echo "Given number is lesser than 100: $NUMBER"
+    echo "Given number is lesser than or equal to 100: $NUMBER"
 fi
