@@ -1,6 +1,6 @@
 #!/bin/bash
 DATE=$(date +"%Y-%m-%d %H:%M:%S")
-LOG="package installation +${DATE}.log"
+LOG="package_installation _${DATE}.log"
 R="\e[0;31m"
 G="\e[0;32m"
 Y="\e[0;33m"
