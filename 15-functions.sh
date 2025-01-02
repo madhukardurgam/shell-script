@@ -7,28 +7,26 @@ then
     exit 1
 fi
 
+VALIDATE(){
+if [ $? -ne 0 ]
+then 
+    echo "Installing is failure"
+    exit 1
+else
+    echo "installation is success"
+fi 
+
+}
 dnf list installed mysql
 if [ $? -ne 0 ]
 then 
     dnf install mysql -y
-    if [ $? -ne 0 ]
-    then 
-        echo "Installing sql is failure"
-        exit 1
-    else
-        echo "installation  of sql is success"
-    fi 
+    VALIDATE()
 fi
 
 dnf list installed git
 if [ $? -ne 0 ]
 then 
     dnf install git -y
-    if [ $? -ne 0 ]
-    then 
-        echo "Installing git is failure"
-        exit 1
-    else
-        echo "installation  of git is success"
-    fi 
+    VALIDATE()
 fi
