@@ -1,4 +1,6 @@
 #!/bin/bash
+DATE=$(date +"%Y-%m-%d %H:%M:%S")
+LOG="package installation +${DATE}.log"
 R="\e[0;31m"
 G="\e[0;32m"
 Y="\e[0;33m"
@@ -20,19 +22,19 @@ else
 fi 
 
 }
-dnf list installed mysql
+dnf list installed mysql &>>$LOG
 if [ $? -ne 0 ]
 then 
-    dnf install mysql -y
+    dnf install mysql -y &>>$LOG
     VALIDATE
 else
     echo -e "already ${Y} installed ${N}"
 fi
 
-dnf list installed git
+dnf list installed git &>>$LOG
 if [ $? -ne 0 ]
 then 
-    dnf install git -y
+    dnf install git -y &>>$LOG
     VALIDATE
 else
     echo -e "already ${Y} installed ${N}"
