@@ -19,3 +19,16 @@ then
         echo "installation  of sql is success"
     fi 
 fi
+
+dnf list installed git
+if [ $? -ne 0 ]
+then 
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then 
+        echo "Installing git is failure"
+        exit 1
+    else
+        echo "installation  of git is success"
+    fi 
+fi
