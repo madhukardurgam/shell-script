@@ -13,10 +13,10 @@ fi
 VALIDATE(){
 if [ $? -ne 0 ]
 then 
-    echo "Installing is ${R} failure ${N}"
+    echo -e "Installing is ${R} failure ${N}"
     exit 1
 else
-    echo "installation is ${G} success ${N}"
+    echo -e "installation is ${G} success ${N}"
 fi 
 
 }
@@ -26,7 +26,7 @@ then
     dnf install mysql -y
     VALIDATE
 else
-    echo "already ${Y} installed ${N}"
+    echo -e "already ${Y} installed ${N}"
 fi
 
 dnf list installed git
@@ -35,5 +35,5 @@ then
     dnf install git -y
     VALIDATE
 else
-    echo "already ${Y} installed ${N}"
+    echo -e "already ${Y} installed ${N}"
 fi
